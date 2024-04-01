@@ -1,0 +1,59 @@
+header {
+    position:relative;
+    width: 99%;
+    background-color: rgb(243, 175, 154);
+    height: 58px;
+    margin-bottom: 10px;
+    border: 8px double rgb(25, 25, 26);
+    overflow: hidden;
+}
+
+header h1 {
+    color:rgb(25, 25, 26);
+    position: relative;
+    bottom: 11px;
+    left: 3%;
+}
+
+#blogBody {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 100vh;
+    height: auto;
+    border: 4px double;
+    background-color: rgb(235, 205, 186);
+    position: relative;
+}
+
+.item .postData {
+    
+    margin: 6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#title {
+    margin: auto;
+    text-align: center;
+}
+
+#content {
+    display: block;
+    text-indent: 40px;
+    background-color: rgb(201, 174, 158);
+    margin-bottom: 20px;
+}
+
+#username {
+    display:flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 4px;
+}
