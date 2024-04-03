@@ -8,21 +8,25 @@ let c1 = localStorage.getItem('content');
 
 console.log(localStorage.getItem('newPost'));
 
+//create object for the newest post
+
 let postObject = {
     username: u1,
     title: t1,
     content: c1
 }
 
+//determine whether the page was accessed by submit button on form or by refresh/other method
+
 if (localStorage.getItem('newPost') == 'true') {
 
 var postsArray = [];
 var oldPosts = [];
-
+//check if the relevant key in storage has been set before accessing archive of older posts
 if (localStorage.getItem('fullBlog') != undefined) {
     oldPosts = JSON.parse(localStorage.getItem('fullBlog'));
 }
-
+//begin forming the array of posts to generate
 postsArray.push(postObject);
 
 if (oldPosts != []) {
@@ -40,7 +44,9 @@ else {
 }
 
 localStorage.setItem('newPost', 'false');
+}
 
+//final array generated
 var blogArray = JSON.parse(localStorage.getItem('fullBlog'));
 console.log(blogArray);
 
@@ -61,7 +67,7 @@ idNew = "b"+idNumber
 
 localStorage.setItem('id', idNew);
 
-//
+//create blog post elements
 
 var item = document.createElement("div");
 item.className = 'item'; 
@@ -89,12 +95,11 @@ blogBody.appendChild(item);
 // get location of newest parent post
 newPost = document.querySelector('#'+idNew);
 
+//create blog post
 newPost.appendChild(itemTitle);
 newPost.appendChild(itemContent);
 newPost.appendChild(extraSpace);
 newPost.appendChild(itemUsername);
-
-}
 
 }
 

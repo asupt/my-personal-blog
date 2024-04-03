@@ -1,18 +1,58 @@
+html { height: 100%; }
+
+body {
+    display: block;
+    background-color: white;
+    color: black;
+}
+
 header {
-    position:relative;
-    width: 99%;
+    display: inline-block;
+    width: 97vw;
     background-color: rgb(243, 175, 154);
     height: 58px;
     margin-bottom: 10px;
     border: 8px double rgb(25, 25, 26);
-    overflow: hidden;
+    
 }
 
 header h1 {
     color:rgb(25, 25, 26);
+    position: absolute;
+    top: 4px;
+    left: 30px;
+
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    position:relative;
+}
+
+header button {
     position: relative;
+    top: 4px;
+}
+
+#darkModeButton {
+    height: 50px;
     bottom: 11px;
-    left: 3%;
+    right: 10px;
+    background-color: rgb(58, 28, 112);
+    color: rgb(194, 194, 162);
+}
+
+#back {
+    height: auto;
+    bottom: 11px;
+    width: 60px;
+    right: 5px;
+    height:50px;
+    background-color: brown;
+    color: rgb(194, 194, 162);
 }
 
 #blogBody {
@@ -24,10 +64,11 @@ header h1 {
 .item {
     margin: auto;
     margin-bottom: 50px;
-    width: 100vh;
+    width: 40vw;
     height: auto;
-    border: 4px double;
+    border: 4px double rgb(25, 25, 26);
     background-color: rgb(235, 205, 186);
+    color:rgb(25, 25, 26);
     position: relative;
 }
 
@@ -56,4 +97,21 @@ header h1 {
     bottom: 0;
     right: 0;
     margin-right: 4px;
+}
+
+footer {
+    padding: 0;
+    height: 30px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
+
+footer div {
+    position: relative;
+    display: block;
+    text-align: center; 
+    top: 5px;
 }
